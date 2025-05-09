@@ -4,108 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>True JW Reform</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px;
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #0056b3;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .tab {
+            padding: 15px 30px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            background-color: #007BFF;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+        }
+
+        .tab:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .tab.active {
+            background-color: #004085;
+            transform: scale(1.1);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+            }
+
+            .tab {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+
+            .tab-content {
+                margin-top: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
         <h1>Welcome to True JW Reform</h1>
-        <p>A movement for thoughtful Jehovah's Witnesses, aiming for internal reform without rejecting core biblical doctrines.</p>
+        <p>A movement for thoughtful Jehovah's Witnesses seeking internal reform while preserving core beliefs.</p>
     </header>
 
-    <!-- About Us Section -->
-    <section id="about-us">
-        <h2>About Us</h2>
-        <p>We are a group of Jehovah's Witnesses who aim for a spiritual reform within the movement, keeping the core biblical doctrines while rejecting leadership tactics that mislead and control. Our focus is on spiritual freedom, the true application of Bible teachings, and restoring the early Christian practices of worship.</p>
-    </section>
+    <div class="tabs">
+        <div class="tab active" onclick="openTab(event, 'beliefs')">Core Beliefs</div>
+        <div class="tab" onclick="openTab(event, 'articles')">Articles & Blogs</div>
+        <div class="tab" onclick="openTab(event, 'hymns')">Hymns</div>
+        <div class="tab" onclick="openTab(event, 'kingdom-herald')">Kingdom Herald</div>
+        <div class="tab" onclick="openTab(event, 'about')">About Us</div>
+        <div class="tab" onclick="openTab(event, 'contact')">Contact</div>
+    </div>
 
-    <!-- Core Beliefs Section -->
-    <section id="core-beliefs">
-        <h2>Our Core Beliefs</h2>
-        <p>Our beliefs are similar to those of Jehovah’s Witnesses, but we emphasize several differences. Here are the main points:</p>
+    <div class="tab-content active" id="beliefs">
+        <h2>Core Beliefs and Differences with the Watchtower</h2>
+        <p>The core beliefs are basically the same (no Trinity, no hellfire, importance of Jehovah's Name, earthly paradise) but we reject:</p>
         <ul>
-            <li><strong>No central governing authority:</strong> We believe each congregation should elect its own elders, as the Bible teaches, instead of having a central authority like the Watchtower governing body.</li>
-            <li><strong>No invisible presence of Christ in 1919:</strong> We reject the idea that Christ invisibly chose the Governing Body of Watchtower in 1919 as His mouthpiece. Instead, we believe that Jesus will judge His house before Armageddon.</li>
-            <li><strong>Heavenly hope only for Christians:</strong> We reject the idea that some Christians have an earthly hope. We believe only those chosen by Jehovah to rule with Christ in heaven are the true Christians.</li>
-            <li><strong>Using only Scripture-based materials:</strong> We follow Bible teachings and use materials that align with Scripture, not men's ideas, allowing for independent Bible study.</li>
-            <li><strong>144,000 as a symbolic group:</strong> We view the 144,000 mentioned in Revelation as symbolic, representing the faithful Christian Church, not a literal number.</li>
-            <li><strong>Freedom of thought:</strong> We believe in the freedom of thought in non-salvation matters, and reject excommunication for expressing differing opinions.</li>
+            <li>We believe that each congregation should be able to elect its own elders, rejecting central control.</li>
+            <li>We reject the claim that in 1919, Christ chose the governing body as His mouthpiece.</li>
+            <li>We believe all Christians should have the heavenly hope, and the 144,000 is symbolic, not literal.</li>
+            <li>We reject certain doctrines and embrace only that which aligns with scripture.</li>
         </ul>
-    </section>
+    </div>
 
-    <!-- Differences with Watchtower Section -->
-    <section id="differences-with-watchtower">
-        <h2>Our Differences with Watchtower</h2>
-        <p>We are not a splinter group but a movement for internal reform. The following are key areas where we differ from the Watchtower organization:</p>
-        <ul>
-            <li>We believe the Church should not have a central authority.</li>
-            <li>We reject the 1919 doctrine of Christ invisibly choosing the Governing Body of the Watchtower.</li>
-            <li>We believe in the heavenly hope for all Christians, not the "earthly hope" for some.</li>
-            <li>We value the study of all Christian materials and reject the idea that only Watchtower publications are authoritative.</li>
-        </ul>
-    </section>
+    <div class="tab-content" id="articles">
+        <h2>Articles & Blogs</h2>
+        <p>Explore articles, blogs, and resources that help strengthen your faith. <a href="https://jwcovenantfellowship.blogspot.com/">Read our latest blog posts</a>.</p>
+    </div>
 
-    <!-- Old Hymns Section -->
-    <section id="old-hymns">
-        <h2>Old Hymns</h2>
-        <p>Explore the old hymns cherished by early Bible Students. These hymns reflect the original spirit of Christian worship, unlike the modern songs introduced by the current Watchtower organization. You can download the full hymnbook below:</p>
-        <a href="path_to_your_pdf_file" target="_blank">Download Hymnbook (PDF)</a>
-    </section>
+    <div class="tab-content" id="hymns">
+        <h2>Hymns</h2>
+        <p>Explore our collection of historic hymns from the early Watchtower days. <a href="path/to/hymnal.pdf" download>Download the Hymnal PDF</a></p>
+    </div>
 
-    <!-- Kingdom Herald Magazine Section -->
-    <section id="kingdom-herald">
+    <div class="tab-content" id="kingdom-herald">
         <h2>Kingdom Herald Magazine</h2>
-        <p>Our magazine, the Kingdom Herald, presents biblical truths and reformative perspectives. Below, you can download the first issue of our magazine in PDF format:</p>
-        <a href="path_to_first_issue_pdf" target="_blank">Download Kingdom Herald - Issue 1 (PDF)</a>
-        <p>Stay tuned for future issues!</p>
-    </section>
+        <p>Our publication offering spiritual insights, Bible study resources, and much more. <a href="path/to/kingdom-herald-issue1.pdf" download>Download the first issue of Kingdom Herald</a></p>
+    </div>
 
-    <!-- Watchtower Errors Section -->
-    <section id="watchtower-errors">
-        <h2>Watchtower Errors and Biblical Truth</h2>
-        <p>Explore the mistakes in Watchtower publications and compare them with the true teachings of the Bible:</p>
-        <a href="link_to_article" target="_blank">Read more about the Watchtower Errors</a>
-    </section>
+    <div class="tab-content" id="about">
+        <h2>About Us</h2>
+        <p>We are a group of Jehovah's Witnesses seeking internal reform while keeping the core teachings of the Bible intact. Learn more about our goals, beliefs, and vision.</p>
+    </div>
 
-    <!-- Bible Resources Section -->
-    <section id="bible-resources">
-        <h2>Bible Resources</h2>
-        <p>We provide access to Bible-related books and commentaries that are in harmony with Scripture. Below are some resources you can download:</p>
-        <a href="link_to_book_1" target="_blank">Download Book 1 (PDF)</a><br>
-        <a href="link_to_book_2" target="_blank">Download Book 2 (PDF)</a>
-    </section>
-
-    <!-- Our News Section -->
-    <section id="our-news">
-        <h2>Our News</h2>
-        <p>Stay up to date with our latest developments and updates:</p>
-        <a href="link_to_news_article" target="_blank">Read the latest news</a>
-    </section>
-
-    <!-- Biblical Videos Section -->
-    <section id="biblical-videos">
-        <h2>Biblical Videos</h2>
-        <p>Watch our selection of biblical videos that cover various teachings and interpretations:</p>
-        <a href="https://www.youtube.com/watch?v=qrxWT6XtsHw" target="_blank">Watch Video 1</a><br>
-        <a href="https://www.youtube.com/watch?v=YmbG2UJSzVI" target="_blank">Watch Video 2</a>
-    </section>
-
-    <!-- External Links Section -->
-    <section id="external-links">
-        <h2>Recommended Websites</h2>
-        <p>Here are some other websites we recommend for further reading:</p>
-        <a href="https://www.beyondwatchtower.com/" target="_blank">Website 1</a><br>
-        <a href="https://www.jwfacts.com/" target="_blank">Website 2</a>
-    </section>
-
-    <!-- Contact Us Section -->
-    <section id="contact-us">
+    <div class="tab-content" id="contact">
         <h2>Contact Us</h2>
-        <p>We would love to hear from you! Feel free to send us your comments or questions:</p>
-        <p>Email: <a href="mailto:agnusperpetua@gmail.com">agnusperpetua@gmail.com</a></p>
-    </section>
+        <p>If you have any questions or feedback, feel free to contact us. Email us at <a href="mailto:contact@truejwreform.org">contact@truejwreform.org</a>.</p>
+    </div>
 
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 </body>
 </html>
-
